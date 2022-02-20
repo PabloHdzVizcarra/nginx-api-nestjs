@@ -4,17 +4,23 @@ import { settings } from '../settings';
 @Controller('/music')
 export class ExampleController {
   @Get('/blink')
-  public helloBlink(): string {
-    return settings.blink;
+  public helloBlink() {
+    return {
+      message: settings.blink,
+    };
   }
 
   @Get('/imagine.dragons')
-  public helloImagineDragons(): string {
-    return settings.dragons;
+  public helloImagineDragons() {
+    return {
+      message: settings.dragons,
+    };
   }
 
   @Get('/twenty')
-  public helloTwentyOnePilots(): string {
-    return settings.pilots;
+  public helloTwentyOnePilots() {
+    return {
+      message: settings.pilots,
+    };
   }
 }
